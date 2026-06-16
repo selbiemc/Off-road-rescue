@@ -132,34 +132,40 @@ footer{
     </div>
 </section>
 
-<section class="section" id="request">
-    <h2>Request Assistance</h2>
+<form action="https://formspree.io/f/mgobqdkd" method="POST">
 
-    <form action="https://formspree.io/f/mgobqdkd" method="POST">
+    <label>Name</label>
+    <input type="text" name="customer_name" required>
 
-        <label>Name</label>
-        <input type="text" required>
+    <label>Phone</label>
+    <input type="tel" name="phone" required>
 
-        <label>Phone</label>
-        <input type="tel" required>
+    <label>Service Needed</label>
+    <select name="service">
+        <option>Dead Battery</option>
+        <option>Ride Assistance</option>
+        <option>Fuel Delivery</option>
+    </select>
 
-        <label>Service Needed</label>
-        <select>
-            <option>Dead Battery</option>
-            <option>ride </option>
-            <option>Fuel Delivery</option>
-        </select>
+    <label>Location</label>
+    <input type="text" name="location" id="location"
+           placeholder="Tap button to auto-fill GPS">
 
-        <label>Location</label>
-        <input type="text" id="location" placeholder="Tap button to auto-fill GPS">
+    <button type="button" onclick="getLocation()">
+        📍 Use My Current Location
+    </button>
 
-        <button type="button" onclick="getLocation()">📍 Use My Current Location</button>
-        <br><br>
+    <br><br>
 
-        <textarea placeholder="Describe your situation"></textarea>
+    <label>Description</label>
+    <textarea name="details"
+              placeholder="Describe your situation"></textarea>
 
-        <button type="submit">Send Request</button>
-    </form>
+    <button type="submit">
+        🚨 Send Request
+    </button>
+
+</form>
 </section>
 
 <section class="section">
