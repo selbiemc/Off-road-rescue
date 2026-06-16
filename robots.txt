@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://selbiemc.github.io/Off-road-rescue/sitemap.xml
